@@ -1,0 +1,120 @@
+@font-face {
+  font-display: swap;
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/space-grotesk-v15-latin-500.woff2") format("woff2");
+}
+
+:root {
+  /* Colors */
+  --clr-primary-red: hsl(0, 100%, 66%);
+  --clr-primary-gradient: linear-gradient(
+    to bottom,
+    hsl(249, 99%, 64%),
+    hsl(278, 94%, 30%)
+  );
+
+  --clr-neutral-100: hsl(278, 68%, 11%);
+  --clr-neutral-200: hsl(279, 6%, 55%);
+  --clr-neutral-300: hsl(270, 3%, 87%);
+  --clr-neutral-400: hsl(0, 0%, 100%);
+
+  /* Fonts */
+  --ff-primary: "Space Grotesk", sans-serif;
+  --fs-300: 0.875rem;
+  --fs-400: 1rem;
+  --fs-500: 1.125rem;
+  --fw-semi-bold: 500;
+}
+
+/* Css Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* General */
+body {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-500);
+  height: 100vh;
+  background: url("/assets/imgs/bg-main-desktop.png") no-repeat left / contain,
+    white;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 16.25rem;
+  transform: translateY(-50%);
+}
+
+/* Cards */
+.component {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cards {
+  display: grid;
+  place-content: center;
+}
+
+.form-container {
+  display: grid;
+  place-content: center;
+  border: 1px solid red;
+}
+
+.form {
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  border: 1px solid blue;
+  padding: 2rem;
+}
+
+.form-item {
+  display: grid;
+  gap: 5px;
+  width: 100%;
+}
+
+.form-item label {
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: var(--fs-300);
+  color: var(--clr-neutral-100);
+}
+
+.form-item input {
+  padding: 10px;
+}
